@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+        
+
+       
+    
+</head>
+<body>
+    <div class="voting-app">
+        <header class="header">
+            <h1>Voting System</h1>
+            <p>Empowering Democratic Choices</p>
+        </header>
+
+        <div class="card">
+            <div class="card-title">Cast Your Vote</div>
+            <div id="voteButtons" class="vote-buttons"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Candidate Management</div>
+            <div class="input-group">
+                <input type="text" id="newCandidate" placeholder="Enter candidate name">
+                <button class="btn" onclick="addCandidate(document.getElementById('newCandidate').value)">Add Candidate</button>
+            </div>
+            <div class="input-group">
+                <input type="text" id="removeCandidate" placeholder="Enter candidate name">
+                <button class="btn" onclick="removeCandidate(document.getElementById('removeCandidate').value)">Remove Candidate</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Election Controls</div>
+            <div class="input-group">
+                <button class="btn btn-secondary" onclick="findWinners()">Find Winner</button>
+                <button class="btn btn-secondary" onclick="resetVotes()">Reset Votes</button>
+                <button class="btn btn-secondary" onclick="resetCandidates()">Reset Candidates</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Results</div>
+            <div id="resultsOutput" class="results"></div>
+        </div>
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
